@@ -1,0 +1,276 @@
+.ad-detail-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.ad-detail-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.ad-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.ad-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.gallery-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.ad-detail-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.ad-detail-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.ad-detail-badges {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.ad-detail-section {
+  margin-bottom: 32px;
+}
+
+.ad-detail-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.ad-detail-section p {
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.characteristics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.characteristics-table tr {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.characteristics-table td {
+  padding: 12px 0;
+}
+
+.char-key {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  width: 40%;
+}
+
+.char-value {
+  color: var(--color-text);
+}
+
+.seller-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.seller-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.seller-label {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.seller-value {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.moderation-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-item {
+  padding: 16px;
+  background: var(--color-bg-1);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-border);
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.history-date {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.history-moderator {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.history-action {
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.action-approved {
+  background: var(--color-bg-3);
+  color: var(--color-success);
+}
+
+.action-rejected {
+  background: var(--color-bg-4);
+  color: var(--color-danger);
+}
+
+.action-requestChanges {
+  background: var(--color-bg-6);
+  color: var(--color-warning);
+}
+
+.history-reason {
+  margin-bottom: 4px;
+  color: var(--color-text);
+}
+
+.history-comment {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.no-history {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.moderation-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.moderation-form {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: var(--radius-base);
+}
+
+.reject-form {
+  background: var(--color-bg-4);
+  border: 2px solid var(--color-danger);
+}
+
+.draft-form {
+  background: var(--color-bg-6);
+  border: 2px solid var(--color-warning);
+}
+
+.moderation-form h4 {
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.reasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.reason-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.reason-checkbox input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .ad-detail-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .nav-buttons {
+    justify-content: space-between;
+  }
+
+  .image-gallery {
+    flex-wrap: wrap;
+  }
+
+  .gallery-img {
+    width: calc(33.333% - 8px);
+    height: 120px;
+  }
+
+  .seller-info {
+    grid-template-columns: 1fr;
+  }
+}
